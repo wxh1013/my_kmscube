@@ -5,10 +5,12 @@ SRCS += $(wildcard src/*.c)
 
 CC_INC += -I$(INCDIR)/third_lib/libdrm/include \
         -I$(INCDIR)/third_lib/libdrm/include/libdrm \
-	-I$(INCDIR)/third_lib/libopenGL_ES_EGL/include
+	-I$(INCDIR)/third_lib/libopenGL_ES_EGL/include\
+        -I$(INCDIR)/third_lib/libgbm/include
 
 CC_LIB +=-L$(INCDIR)/third_lib/libdrm/lib\
-         -L$(INCDIR)/third_lib/libopenGL_ES_EGL/lib   
+         -L$(INCDIR)/third_lib/libopenGL_ES_EGL/lib\
+         -L$(INCDIR)/third_lib/libgbm/lib
           	
 C_OBJS  = $(patsubst %.c, %.o, $(SRCS))
 
